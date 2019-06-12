@@ -1,0 +1,139 @@
+.citacao-bio {
+    background-color: #D9E5E3;
+    border: 10px solid #C2CCCA;
+    padding: 20px;
+    margin: 20px 40px;
+    width: 250px;
+    box-sizing: border-box;
+    position: relative;
+    transition: box-shadow 1s, transform 2s;
+    transition-delay: 0.2s, 0s;
+    -webkit-animation: quica 1s infinite;
+    animation: quica 1s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.citacao-bio:nth-of-type(even) {
+    float: left;
+    margin-left: 0;
+}
+
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.citacao-bio:nth-of-type(odd) {
+    float: right;
+    margin-right: 0;
+}
+
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.5);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    transition-delay: 0s, 1s;
+}
+
+.container>p::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
+}
+
+.citacao-bio::before {
+    content: '"';
+    font-family: 'Catamaran', sans-serif;
+    font-size: 10em;
+    line-height: 90%;
+    color: #bbb;
+    position: absolute;
+
+}
+
+.citacao-bio>p {
+    position: relative;
+}
+
+
+.header th {
+    background-color: #3C1D3D;
+    color: white;
+    font-weight: bold;
+}
+
+tbody th {
+    background-color: #851944;
+    color: white;
+    font-weight: bold;
+}
+
+.habilidades td {
+    background-color: #EEE;
+    color: inherit;
+}
+
+.habilidades td,
+.habilidades th {
+    padding: 1em;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0.25em;
+    margin: 1em 0;
+}
+
+.habilidades [colspan] {
+    text-align: center;
+    font-style: italic;
+    vertical-align: middle;
+}
+
+@-webkit-keyframes quica {
+    from {
+        top: 0;
+    }
+
+    90% {
+        transform: rotate(-2deg);
+    }
+
+    95% {
+        transform: rotate(2deg);
+    }
+
+    to {
+        top: 1em;
+    }
+}
+
+@keyframes quica {
+    from {
+        top: 0;
+    }
+
+    90% {
+        transform: rotate(-2deg);
+    }
+
+    95% {
+        transform: rotate(2deg);
+    }
+
+    to {
+        top: 1em;
+    }
+}
